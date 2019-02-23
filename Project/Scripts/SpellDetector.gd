@@ -6,6 +6,8 @@ onready var player = get_parent().get_node("player")
 onready var container = get_node("Container")
 var polvo = preload("res://Objects/Polvo.tscn")
 
+
+
 func _ready():
 	set_process_input(true)
 
@@ -38,6 +40,13 @@ func _process(delta):
 		par = true
 
 func calcular_spell():
+	var regex = RegEx.new()
+	regex.compile("^[0-1]{1,}7+[1-5]{1,}[3-4]{1,}$")
+	var result = regex.search(spell)
+	if(result):
+		print("FIIIIIRE")
+	else:
+		print("Esto no tira")
 	print(spell);
 
 func detect(body, valor_augmentar):

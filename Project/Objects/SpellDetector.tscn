@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/SpellDetector.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Tileset/porta.png" type="Texture" id=2]
@@ -8,7 +8,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 5 )
 
-[node name="SpellDetector" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5, 5 )
+
+[node name="SpellDetector" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -42,7 +47,6 @@ shape = SubResource( 1 )
 
 [node name="RightUp" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 32, -32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -61,7 +65,7 @@ __meta__ = {
 [node name="RightUp" type="CollisionShape2D" parent="RightUp" index="0"]
 
 rotation = 0.785398
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Right" type="Area2D" parent="." index="3"]
@@ -90,7 +94,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="RightDown" type="Area2D" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( 32, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -109,7 +112,7 @@ __meta__ = {
 [node name="RightDown" type="CollisionShape2D" parent="RightDown" index="0"]
 
 rotation = -0.785398
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Down" type="Area2D" parent="." index="5"]
@@ -136,7 +139,6 @@ shape = SubResource( 1 )
 
 [node name="DownLeft" type="Area2D" parent="." index="6"]
 
-editor/display_folded = true
 position = Vector2( -32, 32 )
 rotation = 0.785398
 input_pickable = true
@@ -155,7 +157,7 @@ __meta__ = {
 
 [node name="DownLeft" type="CollisionShape2D" parent="DownLeft" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Left" type="Area2D" parent="." index="7"]
 
@@ -182,7 +184,6 @@ shape = SubResource( 1 )
 
 [node name="UpLeft" type="Area2D" parent="." index="8"]
 
-editor/display_folded = true
 position = Vector2( -32, -32 )
 rotation = -0.785398
 input_pickable = true
@@ -201,7 +202,7 @@ __meta__ = {
 
 [node name="UpLeft" type="CollisionShape2D" parent="UpLeft" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Container" type="Node" parent="." index="9"]
 

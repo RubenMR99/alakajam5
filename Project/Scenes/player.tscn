@@ -1,14 +1,57 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mago/back/tile000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mago/back/tile001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mago/back/tile002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mago/back/tile003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mago/front/tile000.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mago/front/tile001.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mago/front/tile002.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mago/front/tile003.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile000.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile001.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile002.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile003.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile004.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile005.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile006.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile007.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile008.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile009.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 17.452, 30.4051 )
 
-[node name="player" type="KinematicBody2D" index="0"]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "backIdle",
+"speed": 2.5
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "frontIdle",
+"speed": 2.5
+} ]
+
+[node name="player" type="KinematicBody2D"]
 
 position = Vector2( 32, 32 )
 input_pickable = false
@@ -26,17 +69,8 @@ max_acc = 1.7
 frenada = 0.3
 speed = 275
 
-[node name="playerSprite" type="Sprite" parent="." index="0"]
+[node name="playerCamera" type="Camera2D" parent="." index="0"]
 
-texture = ExtResource( 2 )
-
-[node name="playerColision" type="CollisionShape2D" parent="." index="1"]
-
-shape = SubResource( 1 )
-
-[node name="playerCamera" type="Camera2D" parent="." index="2"]
-
-offset = Vector2( 5, 5 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -46,10 +80,10 @@ limit_top = -10000000
 limit_right = 10000000
 limit_bottom = 10000000
 limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = false
-smoothing_speed = 50.0
+smoothing_speed = 25.0
 offset_v = 0.0
 offset_h = 0.0
 drag_margin_left = 0.0
@@ -59,6 +93,18 @@ drag_margin_bottom = 0.0
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing", "Visibility" ]
+
+[node name="playerColision" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="." index="2"]
+
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+animation = "backIdle"
+playing = true
+_sections_unfolded = [ "Transform" ]
 
 

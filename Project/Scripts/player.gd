@@ -57,9 +57,9 @@ func get_input():
 			$playerSprite.animation = "left"
 			$playerSprite.flip_h = true;
 	if (abs(velocity.x) < abs(velocity.y)):
-		if (velocity.y > 0):
+		if (velocity.y < 0):
 			$playerSprite.animation = "back"
-		elif (velocity.y < 0):
+		elif (velocity.y > 0):
 			$playerSprite.animation = "front"
 	else:
 		$playerSprite.animation = "frontIdle"

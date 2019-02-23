@@ -25,6 +25,7 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
+velocitatEnemic = 50
 
 [node name="enemicSprite" type="Sprite" parent="." index="0"]
 

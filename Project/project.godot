@@ -13,10 +13,6 @@ config_version=3
 config/name="Project"
 config/icon="res://icon.png"
 
-[autoload]
-
-ReglesRooms="*res://Scripts/ReglesRooms.gd"
-
 [debug]
 
 settings/fps/force_fps=60

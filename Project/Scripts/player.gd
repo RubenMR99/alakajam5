@@ -27,7 +27,8 @@ func get_input():
 	velocity = velocity.normalized() * speed
 	if (Input.is_action_pressed('ui_shift') and (velocity.x != 0 or velocity.y != 0)):
 		acceleracio += 0.05
-		velocity *= min(acceleracio, max_acc)
+		acceleracio = min(acceleracio, max_acc)
+		velocity *= acceleracio
 	else:
 		if (acceleracio > 1):
 			acceleracio -= frenada
@@ -44,5 +45,5 @@ func get_input():
 
 func _physics_process(delta):
 	move_and_slide(get_input())
-	position.x = clamp(position.x, 0, screensize.x)
-	position.y = clamp(position.y, 0 , screensize.y)
+	#position.x = clamp(position.x, 0, screensize.x)
+	#position.y = clamp(position.y, 0 , screensize.y)

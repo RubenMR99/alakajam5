@@ -8,6 +8,7 @@ export (int) var speed = 200
 
 var screensize
 var velocity_ant = Vector2()
+var faceUp = false
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -49,20 +50,29 @@ func get_input():
 	velocity_ant = velocity
 	
 	#manegar animacio
+	$playerSprite.flip_h = false;
 	if (abs(velocity.x) > abs(velocity.y)):
 		if (velocity.x > 0):
-			$playerSprite.animation = "right"
-			$playerSprite.flip_h = false;
+			$playerSprite.play("right")
+			faceUp = false
 		elif (velocity.x < 0):
-			$playerSprite.animation = "left"
+			$playerSprite.play("right")
 			$playerSprite.flip_h = true;
+			faceUp = false
 	if (abs(velocity.x) < abs(velocity.y)):
 		if (velocity.y < 0):
 			$playerSprite.animation = "back"
+			faceUp = true
 		elif (velocity.y > 0):
 			$playerSprite.animation = "front"
-	else:
-		$playerSprite.animation = "frontIdle"
+			faceUp = false
+	elif(velocity.x == 0 and velocity.y == 0):
+		if (!faceUp):
+			$playerSprite.animation = "frontIdle"
+		else:
+			$playerSprite.animation = "backIdle"
+	elif(velocity.x < 0 and velocity.y != 0):
+			$playerSprite.flip_h = true;
 	
 	
 	return velocity

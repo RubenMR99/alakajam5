@@ -30,7 +30,7 @@ radius = 3.20809
 
 [node name="hechizoBase" type="Area2D" index="0"]
 
-position = Vector2( 32, 32 )
+position = Vector2( 288, 192 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -39,9 +39,11 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
+SPEED = 100
 
 [node name="baseSprite" type="AnimatedSprite" parent="." index="0"]
 

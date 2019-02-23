@@ -33,7 +33,7 @@
 [ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up_right.png" type="Texture" id=31]
 [ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/terra_piedra.png" type="Texture" id=32]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 8 )
@@ -65,7 +65,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up/StaticBody2D" index="0"]
 
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="mur_right" type="Sprite" parent="." index="1"]
 
@@ -172,7 +172,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up_left/StaticBody2D5" index="0"]
 
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="mur_up_right" type="Sprite" parent="." index="5"]
@@ -198,7 +198,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up_right/StaticBody2D6" index="0"]
 
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="mur_down_right" type="Sprite" parent="." index="6"]
@@ -279,7 +279,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_complet/StaticBody2D9" index="0"]
 
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="punt_up_right" type="Sprite" parent="." index="10"]
@@ -486,7 +486,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra_isleta_mig/StaticBody2D10" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="terra_left" type="Sprite" parent="." index="20"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-var spell = [0,0,0,0,0,0,0,0]
+var spell = ""
 var funcionar = false
 onready var player = get_parent().get_node("player")
 onready var container = get_node("Container")
@@ -9,16 +9,19 @@ var polvo = preload("res://Objects/Polvo.tscn")
 func _ready():
 	set_process_input(true)
 
+var state = 0
 func _input(event):
 	if(event.is_action_pressed("ui_select")):
-		spell = [0,0,0,0,0,0,0,0]
+		if(not funcionar):
+			spell = ""
+			
+			funcionar = true
+		else:
+			calcular_spell()
+			for i in container.get_children():
+				i.queue_free()
+			funcionar = false
 		
-		funcionar = true
-	elif(event.is_action_released("ui_select")):
-		calcular_spell()
-		for i in container.get_children():
-			i.queue_free()
-		funcionar = false
 
 
 var par = false
@@ -39,7 +42,7 @@ func calcular_spell():
 
 func detect(body, valor_augmentar):
 	global_position = body.global_position
-	spell[valor_augmentar] += 1
+	spell = spell + String(valor_augmentar) + "_"
 
 func _on_Up(body):
 	detect(body, 0)

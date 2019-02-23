@@ -60,9 +60,6 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 friction = 0.75
 acceleracio = 0.8
 max_acc = 1.7
@@ -105,6 +102,7 @@ shape = SubResource( 1 )
 
 frames = SubResource( 2 )
 animation = "backIdle"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 

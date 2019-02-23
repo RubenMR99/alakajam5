@@ -15,7 +15,7 @@ func dibuixar_mapa(mapa, pos):
 					peca.set_texture(blanc)
 				else:
 					peca.set_texture(negre)
-				peca.scale = Vector2(3, 3)
-				peca.position = Vector2(i*10, j*10)
+				peca.scale = Vector2(1.5, 1.5)
+				peca.position = Vector2(i*5, j*5)
 				add_child(peca)
 	

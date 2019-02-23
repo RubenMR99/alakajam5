@@ -21,18 +21,20 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="tileset" type="Node" index="0"]
+[node name="tileset" type="Node"]
 
 [node name="mur_up" type="Sprite" parent="." index="0"]
 
 editor/display_folded = true
+position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
-centered = false
 _sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="mur_up" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -40,9 +42,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up/StaticBody2D" index="0"]
 
@@ -51,14 +51,15 @@ shape = SubResource( 1 )
 [node name="mur_right" type="Sprite" parent="." index="1"]
 
 editor/display_folded = true
-position = Vector2( 32, 0 )
+position = Vector2( 48, 16 )
 texture = ExtResource( 2 )
-centered = false
 _sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="mur_right" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -66,9 +67,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_right/StaticBody2D2" index="0"]
 
@@ -76,14 +75,17 @@ shape = SubResource( 1 )
 
 [node name="mur_down" type="Sprite" parent="." index="2"]
 
-position = Vector2( 64, 0 )
+editor/display_folded = true
+position = Vector2( 80, 16 )
 texture = ExtResource( 3 )
-centered = false
 _sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="mur_down" index="0"]
 
-position = Vector2( 16, 16 )
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -91,6 +93,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -101,14 +104,16 @@ shape = SubResource( 1 )
 
 [node name="mur_left" type="Sprite" parent="." index="3"]
 
-position = Vector2( 96, 0 )
+editor/display_folded = true
+position = Vector2( 112, 16 )
 texture = ExtResource( 4 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="mur_left" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -116,6 +121,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -126,14 +132,13 @@ shape = SubResource( 1 )
 
 [node name="mur_up_left" type="Sprite" parent="." index="4"]
 
-position = Vector2( 0, 32 )
+editor/display_folded = true
+position = Vector2( 16, 48 )
 texture = ExtResource( 5 )
-centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="mur_up_left" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -141,6 +146,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -151,14 +157,13 @@ shape = SubResource( 1 )
 
 [node name="mur_up_right" type="Sprite" parent="." index="5"]
 
-position = Vector2( 32, 32 )
+editor/display_folded = true
+position = Vector2( 48, 48 )
 texture = ExtResource( 6 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="mur_up_right" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -166,6 +171,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -176,14 +182,13 @@ shape = SubResource( 1 )
 
 [node name="mur_down_right" type="Sprite" parent="." index="6"]
 
-position = Vector2( 64, 32 )
+editor/display_folded = true
+position = Vector2( 80, 48 )
 texture = ExtResource( 7 )
-centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="mur_down_right" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -191,6 +196,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -201,14 +207,13 @@ shape = SubResource( 1 )
 
 [node name="mur_down_left" type="Sprite" parent="." index="7"]
 
-position = Vector2( 96, 32 )
+editor/display_folded = true
+position = Vector2( 112, 48 )
 texture = ExtResource( 8 )
-centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="mur_down_left" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -216,6 +221,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -226,14 +232,13 @@ shape = SubResource( 1 )
 
 [node name="mur_complet" type="Sprite" parent="." index="8"]
 
-position = Vector2( 0, 96 )
+editor/display_folded = true
+position = Vector2( 16, 112 )
 texture = ExtResource( 9 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="mur_complet" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -241,6 +246,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -251,13 +257,13 @@ shape = SubResource( 1 )
 
 [node name="punt_up_right" type="Sprite" parent="." index="9"]
 
-position = Vector2( 64, 64 )
+editor/display_folded = true
+position = Vector2( 80, 80 )
 texture = ExtResource( 10 )
-centered = false
+_sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="punt_up_right" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -265,6 +271,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Pickable", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -275,14 +282,13 @@ shape = SubResource( 1 )
 
 [node name="punt_down_right" type="Sprite" parent="." index="10"]
 
-position = Vector2( 0, 64 )
+editor/display_folded = true
+position = Vector2( 16, 80 )
 texture = ExtResource( 11 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="punt_down_right" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -290,6 +296,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -300,14 +307,13 @@ shape = SubResource( 1 )
 
 [node name="punt_down_left" type="Sprite" parent="." index="11"]
 
-position = Vector2( 32, 64 )
+editor/display_folded = true
+position = Vector2( 48, 80 )
 texture = ExtResource( 12 )
-centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="punt_down_left" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -315,6 +321,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -325,14 +332,13 @@ shape = SubResource( 1 )
 
 [node name="punt_up_left" type="Sprite" parent="." index="12"]
 
-position = Vector2( 96, 64 )
+editor/display_folded = true
+position = Vector2( 112, 80 )
 texture = ExtResource( 13 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="punt_up_left" index="0"]
 
-position = Vector2( 16, 16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -340,6 +346,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }

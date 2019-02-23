@@ -40,29 +40,36 @@ func _ready():
 	pass
 
 func load_room():
-	var sala = (load(ReglesRooms.room[mapa[pos_actual.x][pos_actual.y]])).instance()
+	for i in cont.get_children():
+		i.queue_free()
+	
+	var sala = (ReglesRooms.room[mapa[pos_actual.x][pos_actual.y]]).instance()
 	sala.position.x = 0
 	sala.position.y = 0
 	cont.add_child(sala)
 	
 	if(mapa[pos_actual.x][pos_actual.y-1] > 0):
 		var porta = porta_resource.instance()
-		porta.position = Vector2(576/2, 20)
+		porta.direccio = Vector2(0,-1)
+		porta.position = Vector2(ReglesRooms.screensize.x/2, 10)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x][pos_actual.y+1] > 0):
 		var porta = porta_resource.instance()
-		porta.position = Vector2(576/2, 384-20)
+		porta.direccio = Vector2(0,1)
+		porta.position = Vector2(ReglesRooms.screensize.x/2, ReglesRooms.screensize.y-10)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x - 1][pos_actual.y] > 0):
 		var porta = porta_resource.instance()
-		porta.position = Vector2(20, 384/2)
+		porta.direccio = Vector2(-1,0)
+		porta.position = Vector2(10, ReglesRooms.screensize.y/2)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x + 1][pos_actual.y] > 0):
 		var porta = porta_resource.instance()
-		porta.position = Vector2(576-20, 384/2)
+		porta.direccio = Vector2(1,0)
+		porta.position = Vector2(ReglesRooms.screensize.x-10, ReglesRooms.screensize.y/2)
 		cont.add_child(porta)
 	
 	

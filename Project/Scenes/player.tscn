@@ -51,7 +51,7 @@ animations = [ {
 "speed": 2.5
 } ]
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 32, 32 )
 input_pickable = false
@@ -104,6 +104,7 @@ shape = SubResource( 1 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 2 )
 animation = "backIdle"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 

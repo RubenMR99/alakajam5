@@ -42,7 +42,7 @@ func calcular_spell():
 
 func detect(body, valor_augmentar):
 	global_position = body.global_position
-	spell = spell + String(valor_augmentar) + "_"
+	spell = spell + String(valor_augmentar)
 
 func _on_Up(body):
 	detect(body, 0)

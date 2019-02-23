@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mur_up.png-47dbb38fd28c5e530af886a8c0d957dc.stex"
+path="res://.import/terra.png-a54a6bf9e901d84cf7e68a71ad03fc1c.stex"
 
 [deps]
 
-source_file="res://Sprites/Tileset/mur_up.png"
-dest_files=[ "res://.import/mur_up.png-47dbb38fd28c5e530af886a8c0d957dc.stex" ]
+source_file="res://Sprites/Tileset/terra.png"
+dest_files=[ "res://.import/terra.png-a54a6bf9e901d84cf7e68a71ad03fc1c.stex" ]
 
 [params]
 

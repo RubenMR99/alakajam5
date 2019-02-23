@@ -19,6 +19,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+friction = 0.9
 speed = 200
 
 [node name="playerSprite" type="Sprite" parent="." index="0"]

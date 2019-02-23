@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 export (float) var friction = 0.9
+export (float) var acceleracio = 0.8
+export (float) var max_acc = 2.5
+export (float) var frenada = 0.3
 export (int) var speed = 200
 
-#var velocity = Vector2()
 var screensize
-var acceleracio = 1
-var max_acc = 2.5
 var velocity_ant = Vector2()
 
 func _ready():
@@ -30,13 +30,15 @@ func get_input():
 		velocity *= min(acceleracio, max_acc)
 	else:
 		if (acceleracio > 1):
-			acceleracio -= 0.2
+			acceleracio -= frenada
 		else:
 			acceleracio = 1
-	if (!velocity.x and !velocity.y):
+	if (!velocity.x):
 		velocity.x = velocity_ant.x * friction
+	
+	if (!velocity.y):
 		velocity.y = velocity_ant.y * friction
-	print(velocity)
+
 	velocity_ant = velocity
 	return velocity
 

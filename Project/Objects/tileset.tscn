@@ -1,22 +1,44 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://Sprites/Tileset/mur_up.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Tileset/mur_right.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Tileset/mur_down.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Tileset/mur_left.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Tileset/mur_up_left.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Tileset/mur_up_right.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Tileset/mur_down_right.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Tileset/mur_down_left.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Tileset/mur_complet.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Tileset/punt_up_right.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Tileset/punt_down_right.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Tileset/punt_down_left.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Tileset/punt_up_left.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Tileset/terra.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Tileset/porta.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_right.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_left.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up_left.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up_right.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down_right.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down_left.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_complet.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_up_right.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_down_right.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_down_left.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_up_left.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/terra.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/puerta.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_alçada(¿.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_alçada_mid.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_isleta.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_isleta_mig.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_left.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_right.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_complet.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down_left.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down_right.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_left.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_right.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up_left.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up_right.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/terra_piedra.png" type="Texture" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
@@ -25,13 +47,9 @@ extents = Vector2( 16, 16 )
 
 [node name="mur_up" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Offset" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="mur_up" index="0"]
 
@@ -46,6 +64,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up/StaticBody2D" index="0"]
 
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
 
 [node name="mur_right" type="Sprite" parent="." index="1"]
@@ -71,7 +90,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_right/StaticBody2D2" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="mur_down" type="Sprite" parent="." index="2"]
 
@@ -100,7 +119,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_down/StaticBody2D3" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="mur_left" type="Sprite" parent="." index="3"]
 
@@ -128,14 +147,13 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_left/StaticBody2D4" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="mur_up_left" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
 position = Vector2( 16, 48 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Z Index" ]
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="mur_up_left" index="0"]
 
@@ -146,21 +164,22 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up_left/StaticBody2D5" index="0"]
 
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="mur_up_right" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 48, 48 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Offset", "Transform" ]
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="mur_up_right" index="0"]
 
@@ -178,7 +197,9 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_up_right/StaticBody2D6" index="0"]
 
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="mur_down_right" type="Sprite" parent="." index="6"]
 
@@ -203,7 +224,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_down_right/StaticBody2D7" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="mur_down_left" type="Sprite" parent="." index="7"]
 
@@ -228,14 +249,18 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_down_left/StaticBody2D8" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
-[node name="mur_complet" type="Sprite" parent="." index="8"]
+[node name="terra2" type="Sprite" parent="." index="8"]
 
-editor/display_folded = true
-position = Vector2( 16, 112 )
+position = Vector2( 112, 112 )
 texture = ExtResource( 9 )
-_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="mur_complet" type="Sprite" parent="." index="9"]
+
+position = Vector2( 16, 112 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="mur_complet" index="0"]
 
@@ -253,13 +278,15 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mur_complet/StaticBody2D9" index="0"]
 
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="punt_up_right" type="Sprite" parent="." index="9"]
+[node name="punt_up_right" type="Sprite" parent="." index="10"]
 
 editor/display_folded = true
 position = Vector2( 80, 80 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="punt_up_right" index="0"]
@@ -278,13 +305,12 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punt_up_right/StaticBody2D10" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
-[node name="punt_down_right" type="Sprite" parent="." index="10"]
+[node name="punt_down_right" type="Sprite" parent="." index="11"]
 
-editor/display_folded = true
 position = Vector2( 16, 80 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="punt_down_right" index="0"]
@@ -303,13 +329,12 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punt_down_right/StaticBody2D11" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
-[node name="punt_down_left" type="Sprite" parent="." index="11"]
+[node name="punt_down_left" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 48, 80 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="punt_down_left" index="0"]
@@ -328,13 +353,13 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punt_down_left/StaticBody2D12" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
-[node name="punt_up_left" type="Sprite" parent="." index="12"]
+[node name="punt_up_left" type="Sprite" parent="." index="13"]
 
 editor/display_folded = true
 position = Vector2( 112, 80 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="punt_up_left" index="0"]
@@ -353,20 +378,213 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punt_up_left/StaticBody2D13" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
-[node name="terra" type="Sprite" parent="." index="13"]
+[node name="terra" type="Sprite" parent="." index="14"]
 
 position = Vector2( 32, 96 )
-texture = ExtResource( 14 )
-centered = false
-_sections_unfolded = [ "Offset" ]
-
-[node name="porta" type="Sprite" parent="." index="14"]
-
-position = Vector2( 64, 96 )
 texture = ExtResource( 15 )
 centered = false
 _sections_unfolded = [ "Offset" ]
+
+[node name="porta" type="Sprite" parent="." index="15"]
+
+position = Vector2( 64, 96 )
+texture = ExtResource( 16 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="terra_alçada" type="Sprite" parent="." index="16"]
+
+position = Vector2( 144, 16 )
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="terra_alçada" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_alçada/StaticBody2D9" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="terra_alçada_mid" type="Sprite" parent="." index="17"]
+
+position = Vector2( 176, 16 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="terra_alçada_mid" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_alçada_mid/StaticBody2D10" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="terra_isleta" type="Sprite" parent="." index="18"]
+
+position = Vector2( 208, 16 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="terra_isleta" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_isleta/StaticBody2D11" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="terra_isleta_mig" type="Sprite" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 240, 24 )
+texture = ExtResource( 20 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="terra_isleta_mig" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_isleta_mig/StaticBody2D10" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="terra_left" type="Sprite" parent="." index="20"]
+
+position = Vector2( 144, 48 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="terra_left" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_left/StaticBody2D12" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="terra_right" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 176, 48 )
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="terra_right" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra_right/StaticBody2D13" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="mur_down2" type="Sprite" parent="." index="22"]
+
+position = Vector2( 144, 80 )
+texture = ExtResource( 23 )
+
+[node name="mur_complet2" type="Sprite" parent="." index="23"]
+
+position = Vector2( 176, 80 )
+texture = ExtResource( 24 )
+
+[node name="mur_down_left2" type="Sprite" parent="." index="24"]
+
+position = Vector2( 208, 80 )
+texture = ExtResource( 25 )
+
+[node name="mur_up2" type="Sprite" parent="." index="25"]
+
+position = Vector2( 240, 80 )
+texture = ExtResource( 26 )
+
+[node name="mur_down_right2" type="Sprite" parent="." index="26"]
+
+position = Vector2( 144, 112 )
+texture = ExtResource( 27 )
+
+[node name="mur_left2" type="Sprite" parent="." index="27"]
+
+position = Vector2( 176, 112 )
+texture = ExtResource( 28 )
+
+[node name="mur_right2" type="Sprite" parent="." index="28"]
+
+position = Vector2( 208, 112 )
+texture = ExtResource( 29 )
+
+[node name="mur_up_left2" type="Sprite" parent="." index="29"]
+
+position = Vector2( 240, 112 )
+texture = ExtResource( 30 )
+
+[node name="mur_up_right2" type="Sprite" parent="." index="30"]
+
+position = Vector2( 144, 144 )
+texture = ExtResource( 31 )
+
+[node name="terra_piedra" type="Sprite" parent="." index="31"]
+
+position = Vector2( 176, 144 )
+texture = ExtResource( 32 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
 

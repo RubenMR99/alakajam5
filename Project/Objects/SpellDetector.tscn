@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5, 5 )
+extents = Vector2( 16, 5 )
 
 [node name="SpellDetector" type="Node2D"]
 
@@ -20,6 +20,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Up" type="Area2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, -48 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -59,7 +60,9 @@ __meta__ = {
 
 [node name="RightUp" type="CollisionShape2D" parent="RightUp" index="0"]
 
+rotation = 0.785398
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Right" type="Area2D" parent="." index="3"]
 
@@ -81,7 +84,9 @@ __meta__ = {
 
 [node name="Right" type="CollisionShape2D" parent="Right" index="0"]
 
+rotation = 1.5708
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="RightDown" type="Area2D" parent="." index="4"]
 
@@ -103,7 +108,9 @@ __meta__ = {
 
 [node name="RightDown" type="CollisionShape2D" parent="RightDown" index="0"]
 
+rotation = -0.785398
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Down" type="Area2D" parent="." index="5"]
 
@@ -131,6 +138,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( -32, 32 )
+rotation = 0.785398
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -140,7 +148,7 @@ collision_layer = 32
 collision_mask = 32
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -153,6 +161,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( -48, 0 )
+rotation = 1.5708
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -162,7 +171,7 @@ collision_layer = 32
 collision_mask = 32
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -175,6 +184,7 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( -32, -32 )
+rotation = -0.785398
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -184,7 +194,7 @@ collision_layer = 32
 collision_mask = 32
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -192,6 +202,8 @@ __meta__ = {
 [node name="UpLeft" type="CollisionShape2D" parent="UpLeft" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="Container" type="Node" parent="." index="9"]
 
 [connection signal="body_entered" from="Up" to="." method="_on_Up"]
 

@@ -1,26 +1,27 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Mago/front/tile000.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Mago/front/tile001.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Mago/front/tile002.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Mago/front/tile003.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Mago/back/tile000.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Mago/back/tile001.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Mago/back/tile002.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Mago/back/tile003.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle1.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile000.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile001.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile002.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile003.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile004.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile005.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile006.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile007.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile008.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Mago/frontIdle/tile009.png" type="Texture" id=21]
+[ext_resource path="res://Objects/miniMapa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Mago/front/tile000.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mago/front/tile001.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mago/front/tile002.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mago/front/tile003.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mago/back/tile000.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mago/back/tile001.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mago/back/tile002.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mago/back/tile003.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mago/backidle/Mago_Back_Idle2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile000.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile001.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile002.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile003.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile004.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile005.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile006.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile007.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile008.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mago/frontIdle/tile009.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,22 +31,22 @@ extents = Vector2( 9.12344, 23.8897 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "front",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "backIdle",
 "speed": 2.5
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "frontIdle",
 "speed": 2.5
@@ -55,11 +56,11 @@ animations = [ {
 
 position = Vector2( 32, 32 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 33
+collision_mask = 32801
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
 friction = 0.75
 acceleracio = 0.8
 max_acc = 1.7
@@ -92,6 +93,11 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing", "Visibility" ]
 
+[node name="miniMapa" parent="playerCamera" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 96, 48 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="playerColision" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 0, 9.5 )
@@ -102,7 +108,6 @@ shape = SubResource( 1 )
 
 frames = SubResource( 2 )
 animation = "backIdle"
-frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 

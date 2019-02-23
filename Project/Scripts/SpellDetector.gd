@@ -3,6 +3,8 @@ extends Node2D
 var spell = [0,0,0,0,0,0,0,0]
 var funcionar = false
 onready var player = get_parent().get_node("player")
+onready var container = get_node("Container")
+var polvo = preload("res://Objects/Polvo.tscn")
 
 func _ready():
 	set_process_input(true)
@@ -12,14 +14,25 @@ func _input(event):
 		spell = [0,0,0,0,0,0,0,0]
 		
 		funcionar = true
-		set_process(false)
 	elif(event.is_action_released("ui_select")):
 		calcular_spell()
+		for i in container.get_children():
+			i.queue_free()
 		funcionar = false
-		set_process(true)
 
+
+var par = false
 func _process(delta):
-	global_position = player.global_position
+	if(not funcionar):
+		global_position = player.global_position
+	elif(funcionar and par):
+		var polvito = polvo.instance()
+		polvito.global_position = player.global_position
+		polvito.z_index = 0
+		container.add_child(polvito) 
+		par = false
+	else:
+		par = true
 
 func calcular_spell():
 	print(spell);

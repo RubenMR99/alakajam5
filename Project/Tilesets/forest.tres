@@ -1,22 +1,44 @@
-[gd_resource type="TileSet" load_steps=17 format=2]
+[gd_resource type="TileSet" load_steps=35 format=2]
 
-[ext_resource path="res://Sprites/Tileset/mur_up.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Tileset/mur_right.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Tileset/punt_down_right.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Tileset/punt_down_left.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Tileset/punt_up_left.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Tileset/terra.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Tileset/porta.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Tileset/mur_down.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Tileset/mur_left.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Tileset/mur_up_left.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Tileset/mur_up_right.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Tileset/mur_down_right.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Tileset/mur_down_left.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Tileset/mur_complet.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Tileset/punt_up_right.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_right.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_down_right.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_down_left.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_up_left.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/terra.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/puerta.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_alçada(¿.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_alçada_mid.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_isleta.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_isleta_mig.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_left.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra_right.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_complet.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down_left.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_down_right.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_left.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_right.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up_left.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/mur_up_right.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_left.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Tileset bosque (caminos y suelo)/terra_piedra.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/terra.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up_left.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_up_right.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down_right.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_down_left.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/mur_complet.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Tileset bosque(terreno de barrera)/punt_up_right.png" type="Texture" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
@@ -35,7 +57,7 @@ extents = Vector2( 16, 16 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 24 )
 } ]
 1/name = "mur_right"
 1/texture = ExtResource( 2 )
@@ -48,11 +70,11 @@ extents = Vector2( 16, 16 )
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 2/name = "mur_down"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 13 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 32 )
@@ -62,11 +84,11 @@ extents = Vector2( 16, 16 )
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 3/name = "mur_left"
-3/texture = ExtResource( 9 )
+3/texture = ExtResource( 24 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 32, 32 )
@@ -76,11 +98,11 @@ extents = Vector2( 16, 16 )
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 4/name = "mur_up_left"
-4/texture = ExtResource( 10 )
+4/texture = ExtResource( 27 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 32, 32 )
@@ -91,10 +113,10 @@ extents = Vector2( 16, 16 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 24 )
 } ]
 5/name = "mur_up_right"
-5/texture = ExtResource( 11 )
+5/texture = ExtResource( 28 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 32, 32 )
@@ -105,10 +127,10 @@ extents = Vector2( 16, 16 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 24 )
 } ]
 6/name = "mur_down_right"
-6/texture = ExtResource( 12 )
+6/texture = ExtResource( 29 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 32, 32 )
@@ -118,11 +140,11 @@ extents = Vector2( 16, 16 )
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 7/name = "mur_down_left"
-7/texture = ExtResource( 13 )
+7/texture = ExtResource( 30 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 32, 32 )
@@ -132,11 +154,11 @@ extents = Vector2( 16, 16 )
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 8/name = "mur_complet"
-8/texture = ExtResource( 14 )
+8/texture = ExtResource( 31 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 32, 32 )
@@ -147,10 +169,10 @@ extents = Vector2( 16, 16 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 24 )
 } ]
 9/name = "punt_up_right"
-9/texture = ExtResource( 15 )
+9/texture = ExtResource( 32 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 32, 32 )
@@ -160,7 +182,7 @@ extents = Vector2( 16, 16 )
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 10/name = "punt_down_right"
@@ -174,7 +196,7 @@ extents = Vector2( 16, 16 )
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 11/name = "punt_down_left"
@@ -188,7 +210,7 @@ extents = Vector2( 16, 16 )
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 12/name = "punt_up_left"
@@ -202,7 +224,7 @@ extents = Vector2( 16, 16 )
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 13/name = "terra"
@@ -223,4 +245,187 @@ extents = Vector2( 16, 16 )
 14/occluder_offset = Vector2( 0, 0 )
 14/navigation_offset = Vector2( 0, 0 )
 14/shapes = [  ]
+15/name = "terra_alçada"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 32, 32 )
+15/is_autotile = false
+15/occluder_offset = Vector2( 16, 16 )
+15/navigation_offset = Vector2( 16, 16 )
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+16/name = "terra_alçada_mid"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 32, 32 )
+16/is_autotile = false
+16/occluder_offset = Vector2( 16, 16 )
+16/navigation_offset = Vector2( 16, 16 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+17/name = "terra_isleta"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 32, 32 )
+17/is_autotile = false
+17/occluder_offset = Vector2( 16, 16 )
+17/navigation_offset = Vector2( 16, 16 )
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+18/name = "terra_isleta_mig"
+18/texture = ExtResource( 11 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 32, 16 )
+18/is_autotile = false
+18/occluder_offset = Vector2( 16, 8 )
+18/navigation_offset = Vector2( 16, 8 )
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 8 )
+} ]
+19/name = "terra_left"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 32, 32 )
+19/is_autotile = false
+19/occluder_offset = Vector2( 16, 16 )
+19/navigation_offset = Vector2( 16, 16 )
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+20/name = "terra_right"
+20/texture = ExtResource( 14 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 32, 32 )
+20/is_autotile = false
+20/occluder_offset = Vector2( 16, 16 )
+20/navigation_offset = Vector2( 16, 16 )
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+21/name = "mur_down2"
+21/texture = ExtResource( 15 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 32, 32 )
+21/is_autotile = false
+21/occluder_offset = Vector2( 16, 16 )
+21/navigation_offset = Vector2( 16, 16 )
+21/shapes = [  ]
+22/name = "mur_complet2"
+22/texture = ExtResource( 16 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 32, 32 )
+22/is_autotile = false
+22/occluder_offset = Vector2( 16, 16 )
+22/navigation_offset = Vector2( 16, 16 )
+22/shapes = [  ]
+23/name = "mur_down_left2"
+23/texture = ExtResource( 17 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 32, 32 )
+23/is_autotile = false
+23/occluder_offset = Vector2( 16, 16 )
+23/navigation_offset = Vector2( 16, 16 )
+23/shapes = [  ]
+24/name = "mur_up2"
+24/texture = ExtResource( 18 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 32, 32 )
+24/is_autotile = false
+24/occluder_offset = Vector2( 16, 16 )
+24/navigation_offset = Vector2( 16, 16 )
+24/shapes = [  ]
+25/name = "mur_down_right2"
+25/texture = ExtResource( 19 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 32, 32 )
+25/is_autotile = false
+25/occluder_offset = Vector2( 16, 16 )
+25/navigation_offset = Vector2( 16, 16 )
+25/shapes = [  ]
+26/name = "mur_left2"
+26/texture = ExtResource( 20 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 32, 32 )
+26/is_autotile = false
+26/occluder_offset = Vector2( 16, 16 )
+26/navigation_offset = Vector2( 16, 16 )
+26/shapes = [  ]
+27/name = "mur_right2"
+27/texture = ExtResource( 21 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 32, 32 )
+27/is_autotile = false
+27/occluder_offset = Vector2( 16, 16 )
+27/navigation_offset = Vector2( 16, 16 )
+27/shapes = [  ]
+28/name = "mur_up_left2"
+28/texture = ExtResource( 22 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 32, 32 )
+28/is_autotile = false
+28/occluder_offset = Vector2( 16, 16 )
+28/navigation_offset = Vector2( 16, 16 )
+28/shapes = [  ]
+29/name = "mur_up_right2"
+29/texture = ExtResource( 23 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 32, 32 )
+29/is_autotile = false
+29/occluder_offset = Vector2( 16, 16 )
+29/navigation_offset = Vector2( 16, 16 )
+29/shapes = [  ]
+30/name = "terra_piedra"
+30/texture = ExtResource( 25 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 32, 32 )
+30/is_autotile = false
+30/occluder_offset = Vector2( 16, 16 )
+30/navigation_offset = Vector2( 16, 16 )
+30/shapes = [  ]
+31/name = "terra2"
+31/texture = ExtResource( 26 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 32, 32 )
+31/is_autotile = false
+31/occluder_offset = Vector2( 16, 16 )
+31/navigation_offset = Vector2( 16, 16 )
+31/shapes = [  ]
 

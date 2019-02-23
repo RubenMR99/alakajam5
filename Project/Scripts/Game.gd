@@ -2,6 +2,7 @@ extends Node
 
 var porta_resource = preload("res://Objects/Porta.tscn");
 onready var cont = $Container
+onready var pla = $player
 onready var mini = $player/miniMapa
 
 var mapa = [[-1,-1,-1,-1,-1,-1,-1],
@@ -73,38 +74,39 @@ func _ready():
 
 func load_room():
 	for i in cont.get_children():
-		i.queue_free()
+			i.queue_free()
 	
 	visto[pos_actual.x][pos_actual.y] = 1
 	mini.dibuixar_mapa(mapa, pos_actual)
 	
 	var sala = (ReglesRooms.room[mapa[pos_actual.x][pos_actual.y]]).instance()
 	sala.position.x = 0
+	sala.name = "sala"
 	sala.position.y = 0
 	cont.add_child(sala)
-	
+
 	if(mapa[pos_actual.x][pos_actual.y-1] > 0):
 		var porta = porta_resource.instance()
 		porta.direccio = Vector2(0,-1)
-		porta.position = Vector2(ReglesRooms.screensize.x/2, 10)
+		porta.position = Vector2(ReglesRooms.screensize.x/2, -10)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x][pos_actual.y+1] > 0):
 		var porta = porta_resource.instance()
 		porta.direccio = Vector2(0,1)
-		porta.position = Vector2(ReglesRooms.screensize.x/2, ReglesRooms.screensize.y-10)
+		porta.position = Vector2(ReglesRooms.screensize.x/2, ReglesRooms.screensize.y-20)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x - 1][pos_actual.y] > 0):
 		var porta = porta_resource.instance()
 		porta.direccio = Vector2(-1,0)
-		porta.position = Vector2(10, ReglesRooms.screensize.y/2)
+		porta.position = Vector2(2, ReglesRooms.screensize.y/2-32)
 		cont.add_child(porta)
 	
 	if(mapa[pos_actual.x + 1][pos_actual.y] > 0):
 		var porta = porta_resource.instance()
 		porta.direccio = Vector2(1,0)
-		porta.position = Vector2(ReglesRooms.screensize.x-10, ReglesRooms.screensize.y/2)
+		porta.position = Vector2(ReglesRooms.screensize.x-2, ReglesRooms.screensize.y/2-32)
 		cont.add_child(porta)
 	
 	

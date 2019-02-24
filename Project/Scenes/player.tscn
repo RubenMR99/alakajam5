@@ -64,12 +64,14 @@ animations = [ {
 [node name="player" type="KinematicBody2D"]
 
 position = Vector2( 32, 32 )
+z_index = 5
+z_as_relative = false
 input_pickable = false
 collision_layer = 33
 collision_mask = 32801
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 friction = 0.75
 acceleracio = 0.8
 max_acc = 1.7
@@ -118,6 +120,7 @@ shape = SubResource( 1 )
 
 frames = SubResource( 2 )
 animation = "front"
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform" ]
 

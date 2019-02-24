@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rayo_16.png-c87800b11ecf1a0a90657b44b9927ae4.stex"
+path="res://.import/aigua_interior_2.png-1c3ed5ba44f37bbd667b077398a9c82b.stex"
 
 [deps]
 
-source_file="res://Sprites/Animacions/rayo_16.png"
-dest_files=[ "res://.import/rayo_16.png-c87800b11ecf1a0a90657b44b9927ae4.stex" ]
+source_file="res://Sprites/Animacions/aigua/aigua_interior_2.png"
+dest_files=[ "res://.import/aigua_interior_2.png-1c3ed5ba44f37bbd667b077398a9c82b.stex" ]
 
 [params]
 

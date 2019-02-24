@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rayo_16.png-c87800b11ecf1a0a90657b44b9927ae4.stex"
+path="res://.import/agua_carcle5.png-91fc84d3a2ac8c6cb0d10fd3b030a54f.stex"
 
 [deps]
 
-source_file="res://Sprites/Animacions/rayo_16.png"
-dest_files=[ "res://.import/rayo_16.png-c87800b11ecf1a0a90657b44b9927ae4.stex" ]
+source_file="res://Sprites/Animacions/aigua/agua_carcle5.png"
+dest_files=[ "res://.import/agua_carcle5.png-91fc84d3a2ac8c6cb0d10fd3b030a54f.stex" ]
 
 [params]
 

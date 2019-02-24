@@ -12,14 +12,15 @@ var velocity_ant = Vector2()
 var faceUp = false
 var hechizoBase = preload("res://Scenes/hechizos/hechizoBase.tscn");
 var hechizoFoc = preload("res://Scenes/hechizos/hechizoFogo.tscn");
+var hechizoAqua = preload("res://Scenes/hechizos/hechizoAqua.tscn");
+var hechizoRayo = preload("res://Scenes/hechizos/hechizoRayo.tscn");
+
 
 func _ready():
 	screensize = get_viewport_rect().size
 
 func get_input():
-	var velocity = Vector2()
-	velocity.x = 0
-	velocity.y = 0
+	var velocity = Vector2(0,0)
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += (1 + acceleracio)
 	if Input.is_action_pressed('ui_left'):
@@ -113,4 +114,15 @@ func hechizo_fuego(size):
 	foco.position = position+Vector2(0,-size*2) 
 	foco.scale = Vector2(size*0.1, size*0.1)
 	get_parent().add_child(foco)
-	
+
+func hechizo_aqua(size):
+	var aqua = hechizoAqua.instance()
+	aqua.position = position 
+	aqua.scale = Vector2(size*0.2, size*0.2)
+	get_parent().add_child(aqua)
+
+func hechizo_rayo(size):
+	var rayo = hechizoRayo.instance()
+	rayo.position = position+Vector2(0,-size*2) 
+	rayo.scale = Vector2(size*0.2, size*0.2)
+	get_parent().add_child(rayo)

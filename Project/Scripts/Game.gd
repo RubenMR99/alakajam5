@@ -69,6 +69,7 @@ func _ready():
 	randomize()
 	generate_random_spots()
 	generate_mapa()
+	mapa[3][3] = 1
 	print(mapa)
 	load_room()
 	pass

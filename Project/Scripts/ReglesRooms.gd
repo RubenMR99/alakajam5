@@ -6,4 +6,5 @@ var screen_shake = 0
 var screensize = Vector2(576, 384)
 
 func _ready():
-	pass
+	for i in range(2,9):
+		room.append(load("res://Rooms/S_Rm_" + String(i) + ".tscn"))

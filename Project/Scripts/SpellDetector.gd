@@ -6,7 +6,12 @@ onready var player = get_parent().get_node("player")
 onready var container = get_node("Container")
 var polvo = preload("res://Objects/Polvo.tscn")
 
+var spellBook = [["Bullet","^(0+$|1+$|2+$|3+$|4+$|5+$|6+$|7+$)"],
+                 ["Fire","^1+7+[0-1]{1,3}(|2)3+(|4)5+(|4)3+$"]]
 
+
+var funciona = []
+var no_funciona = []
 
 func _ready():
 	set_process_input(true)
@@ -23,13 +28,22 @@ func _input(event):
 			for i in container.get_children():
 				i.queue_free()
 			funcionar = false
+	if(event.is_action_pressed("ui_accept")):
+		funciona.append(spell)
+		print("nice")
+	elif(event.is_action_pressed("ui_cancel")):
+		no_funciona.append(spell)
+		print("tonto")
+	elif(event.is_action_pressed("ui_focus_next")):
+		print(funciona)
+		print(no_funciona)
 		
 
 
 var par = false
 func _process(delta):
 	if(not funcionar):
-		global_position = player.global_position
+		global_position = player.global_position+Vector2(0,+8)
 	elif(funcionar and par):
 		var polvito = polvo.instance()
 		polvito.global_position = player.global_position
@@ -41,16 +55,20 @@ func _process(delta):
 
 func calcular_spell():
 	var regex = RegEx.new()
-	regex.compile("^[0-1]{1,}7+[1-5]{1,}[3-4]{1,}$")
-	var result = regex.search(spell)
-	if(result):
-		print("FIIIIIRE")
-	else:
-		print("Esto no tira")
-	print(spell);
+	var trobat = false
+	var i = 0
+	print(spell)
+	while i in range(spellBook.size()) and not trobat:
+		regex.compile(spellBook[i][1])
+		var result = regex.search(spell)
+		if(result):
+			trobat = true
+			print(spellBook[i][0])
+		i+= 1
 
 func detect(body, valor_augmentar):
-	global_position = body.global_position
+	global_position.x = body.global_position.x
+	global_position.y = body.global_position.y+8
 	spell = spell + String(valor_augmentar)
 
 func _on_Up(body):

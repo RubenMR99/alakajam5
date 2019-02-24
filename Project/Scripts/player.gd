@@ -30,6 +30,7 @@ func get_input():
 		acceleracio += 0.05
 		acceleracio = min(acceleracio, max_acc)
 		velocity *= acceleracio
+		get_parent().get_node("SpellDetector").global_position = global_position
 	else:
 		if (acceleracio > 1):
 			acceleracio -= frenada

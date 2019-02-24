@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/enemic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/slime.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/arbusto.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/boxeadora.tscn" type="PackedScene" id=5]
 
-[node name="game_test" type="Node"]
+[node name="game_test" type="Node" index="0"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -14,11 +16,16 @@ texture = ExtResource( 1 )
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
-_sections_unfolded = [ "Collision", "Transform" ]
-
-[node name="enemic" parent="." index="2" instance=ExtResource( 3 )]
+[node name="slime" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 544, 64 )
-velocitatEnemic = 150.0
+
+[node name="arbusto" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 224, 128 )
+
+[node name="boxeadora" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 128, 256 )
 
 

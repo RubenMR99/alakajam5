@@ -53,4 +53,15 @@ animation = "shoot"
 
 shape = SubResource( 2 )
 
+[node name="baseTime" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+autostart = false
+
+[connection signal="body_entered" from="." to="." method="_on_colisio"]
+
+[connection signal="timeout" from="baseTime" to="." method="_on_baseTime_timeout"]
+
 

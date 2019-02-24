@@ -10,7 +10,7 @@ func _ready():
 	#velocitat.x = 0
 	#velocitat.y = 0
 	$baseSprite.play("shoot")
-	
+	$baseTime.start()
 
 func _process(delta):
 	#print("Posicio bala =" + String(position))
@@ -91,3 +91,12 @@ func _7(vel):
 	velocitat.y = -1
 	multiplicador = vel
 	dir = 7
+
+
+func _on_colisio(body):
+	if body.has_method("basico"):
+		body.basico(multiplicador)
+
+
+func _on_baseTime_timeout():
+	queue_free()

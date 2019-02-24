@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/arbusto.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Seto/Seto3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Seto/Seto4.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Seto/Seto5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Seto/Seto6.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Seto/Seto7.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Seto/Seto8.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Seto/Seto1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Seto/Seto2.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "setoMove",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "setoAmaga",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "setoAixeca",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 7.989
+height = 3.87
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 63.0
+
+[node name="arbusto" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="enemicSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "setoAixeca"
+frame = 2
+playing = true
+
+[node name="enemicColision" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="3"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_player_visible"]
+
+[connection signal="body_exited" from="Area2D" to="." method="_player_no_visible"]
+
+

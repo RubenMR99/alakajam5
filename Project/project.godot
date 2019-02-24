@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Project"
+config/name="MagicTheGardening"
 run/main_scene="res://Scenes/Base.tscn"
 config/icon="res://icon.png"
 
@@ -26,6 +26,7 @@ settings/fps/force_fps=60
 
 window/size/width=576
 window/size/height=384
+window/handheld/emulate_touchscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep_height"
 window/stretch/shrink="1"

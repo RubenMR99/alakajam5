@@ -2,5 +2,5 @@ extends Sprite
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://current_scene.tscn")
+	get_tree().change_scene("res://Scenes/Menu.tscn")
 	queue_free()

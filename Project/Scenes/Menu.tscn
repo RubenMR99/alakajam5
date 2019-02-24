@@ -14,9 +14,14 @@ func _ready():
 
 func _on_Play_pressed():
 	get_parent()._play()
+	print(\"vamoño\")
 
 func _on_Exit_pressed():
 	get_tree().quit()
+
+
+#func _on_Play_button_up():
+#	get_parent().play()
 "
 
 [node name="Menu" type="Node2D"]
@@ -85,6 +90,8 @@ position = Vector2( 432, 64 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
+
+[connection signal="button_up" from="Play" to="." method="_on_Play_button_up"]
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 

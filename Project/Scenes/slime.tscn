@@ -47,7 +47,7 @@ script = ExtResource( 1 )
 position = Vector2( 7, 0 )
 frames = SubResource( 1 )
 animation = "left"
-frame = 2
+frame = 7
 playing = true
 
 [node name="enemicColision" type="CollisionShape2D" parent="." index="1"]

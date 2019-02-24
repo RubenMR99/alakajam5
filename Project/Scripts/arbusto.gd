@@ -45,10 +45,7 @@ func _player_no_visible(body):
 		direccio.y = 0
 
 func desapareix():
-	if ($enemicSprite.animation != "setoAmaga"):
-		$enemicSprite.play("setoAmaga")
-	if ($enemicSprite.animation == "setoAmaga" and $enemicSprite.frame > 4):
-		queue_free()
+	queue_free()
 
 func fire(tamany):
 	var dany = salud + 1
@@ -56,6 +53,14 @@ func fire(tamany):
 
 func basico(velocitat):
 	var dany = velocitat * 5
+	salud -= dany
+
+func rayo(velocitat):
+	var dany = velocitat * 8
+	salud -= dany
+
+func water(velocitat):
+	var dany = velocitat * 3
 	salud -= dany
 
 func fer_mal(body):

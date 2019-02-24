@@ -33,10 +33,7 @@ func _physics_process(delta):
 	move_and_slide(direccio.normalized() * velocitatEnemic)
 
 func desapareix():
-	if ($enemicSprite.animation != "idle"):
-		$enemicSprite.play("idle")
-	if ($enemicSprite.animation == "idle" and $enemicSprite.frame > 3):
-		queue_free()
+	queue_free()
 
 func fire(tamany):
 	var dany = salud + 1
@@ -46,6 +43,13 @@ func basico(velocitat):
 	var dany = velocitat * 5
 	salud -= dany
 
+func rayo(velocitat):
+	var dany = velocitat * 8
+	salud -= dany
+
+func water(velocitat):
+	var dany = velocitat * 3
+	salud -= dany
 
 func _detecta_personatge(body):
 	if (body.name == "player"):

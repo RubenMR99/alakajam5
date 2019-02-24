@@ -13,7 +13,7 @@ func _ready():
 	
 
 func _process(delta):
-	print("Posicio bala =" + String(position))
+	#print("Posicio bala =" + String(position))
 	if (dir == 0):
 		_0(multiplicador)
 	elif (dir == 1):

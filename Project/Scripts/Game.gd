@@ -73,6 +73,7 @@ func _ready():
 	load_room()
 	pass
 
+
 func load_room():
 	for i in cont.get_children():
 			i.queue_free()

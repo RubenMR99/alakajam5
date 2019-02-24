@@ -6,10 +6,12 @@ export (float) var max_acc = 2.5
 export (float) var frenada = 0.3
 export (int) var speed = 200
 
+onready var cam = $playerCamera
 var screensize
 var velocity_ant = Vector2()
 var faceUp = false
 var hechizoBase = preload("res://Scenes/hechizos/hechizoBase.tscn");
+var hechizoFoc = preload("res://Scenes/hechizos/hechizoFogo.tscn");
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -80,6 +82,9 @@ func get_input():
 	return velocity
 
 func _physics_process(delta):
+	if(ReglesRooms.screen_shake > 0):
+		cam.offset = Vector2(rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake), rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake))
+		ReglesRooms.screen_shake -= 0.1
 	move_and_slide(get_input())
 
 func hechizo_base(dir, forza):
@@ -102,3 +107,10 @@ func hechizo_base(dir, forza):
 		basico._6(forza)
 	elif (dir == "7"):
 		basico._7(forza)
+
+func hechizo_fuego(size):
+	var foco = hechizoFoc.instance()
+	foco.position = position+Vector2(0,-size*2) 
+	foco.scale = Vector2(size*0.1, size*0.1)
+	get_parent().add_child(foco)
+	

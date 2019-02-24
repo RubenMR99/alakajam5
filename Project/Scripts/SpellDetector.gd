@@ -7,8 +7,14 @@ onready var container = get_node("Container")
 var polvo = preload("res://Objects/Polvo.tscn")
 
 var spellBook = [["Bullet","^(0+$|1+$|2+$|3+$|4+$|5+$|6+$|7+$)"],
-                 ["Fire","^1+7+[0-1]{1,3}(|2)3+(|4)5+(|4)3+$"],
-                 ["Water", "^4+3+(|4)5+(|6)7+(|0)1{1,6}$"]
+                 #["Fire","^1+7+[0-1]{1,3}(|2)3+(|4)5+(|4)3+$"],
+                 ["Fire","^1+7+[0-1]{1,3}2?3+4?5+4?3+$"],
+                 #["Water", "^4+3+(|4)5+(|6)7+(|0)1{1,6}$"],
+                 ["Water", "^4+3+4?5+6?7+0?1{1,6}$"],
+                 #["Rempalago", "^(|4|6)5+(|3)2+(|3|4)5+$"],
+                 ["Rempalago", "^(4|6)?5+3?2+(3|4)?5+$"],
+                 #["Terra", "^(|
+                 ["Terra", "^(1|3)?2+(6|0)?7+(4|6)?5+(2|4)?3+(0|2)?1+$"]
                 ]
 
 
@@ -101,3 +107,5 @@ func executar_echizo(nom, truco):
 	print(nom)
 	if (nom == "Bullet"):
 		player.hechizo_base((truco.substr(truco.length() - 1, truco.length())), truco.length())
+	if (nom == "Fire"):
+		player.hechizo_fuego(truco.length())

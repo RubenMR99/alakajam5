@@ -7,7 +7,9 @@ onready var container = get_node("Container")
 var polvo = preload("res://Objects/Polvo.tscn")
 
 var spellBook = [["Bullet","^(0+$|1+$|2+$|3+$|4+$|5+$|6+$|7+$)"],
-                 ["Fire","^1+7+[0-1]{1,3}(|2)3+(|4)5+(|4)3+$"]]
+                 ["Fire","^1+7+[0-1]{1,3}(|2)3+(|4)5+(|4)3+$"],
+                 ["Water", "^4+3+(|4)5+(|6)7+(|0)1{1,6}$"]
+                ]
 
 
 var funciona = []

@@ -7,6 +7,8 @@ var slime = preload("res://Scenes/slime.tscn");
 var boxeadora = preload("res://Scenes/boxeadora.tscn");
 var screensize
 
+var game_over = preload("res://Sprites/gameover.png")
+
 onready var cont = $Container
 onready var pla = $player
 onready var mini = $player/miniMapa
@@ -93,7 +95,7 @@ func load_room():
 	sala.position.y = 0
 	cont.add_child(sala)
 	
-	var n_arbusts = rand_range(0,5)
+	var n_arbusts = rand_range(0,2)
 	var contador = 0
 	while (contador < n_arbusts):
 		var arbustNou = arbusto.instance()
@@ -102,7 +104,7 @@ func load_room():
 		arbustNou.position.y = rand_range(0, 400)
 		contador += 1
 	
-	var n_slime = rand_range(0,5)
+	var n_slime = rand_range(0,2)
 	contador = 0
 	while (contador < n_slime):
 		var slimeNou = slime.instance()
@@ -111,7 +113,7 @@ func load_room():
 		slimeNou.position.y = rand_range(0, 400)
 		contador += 1
 	
-	var n_boxin = rand_range(0,3)
+	var n_boxin = rand_range(0,2)
 	contador = 0
 	while (contador < n_boxin):
 		var boxeadoraNou = boxeadora.instance()
@@ -143,5 +145,14 @@ func load_room():
 		porta.direccio = Vector2(1,0)
 		porta.position = Vector2(ReglesRooms.screensize.x-2, ReglesRooms.screensize.y/2-32)
 		cont.add_child(porta)
-	
+
+func game_over():
+	var ga = Sprite.new()
+	ga.global_position = Vector2(0,0)
+	ga.centered = false
+	ga.set_texture(game_over)
+	add_child(ga)
+	yield(get_tree().create_timer(3), "timeout")
+	get_parent().restart()
+	queue_free()
 	

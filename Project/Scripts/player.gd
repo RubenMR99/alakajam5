@@ -8,7 +8,10 @@ export (int) var speed = 200
 export (int) var polvito = 100
 var salud = 250
 
+#onready var con = $Node2D
 onready var cam = $playerCamera
+onready var text = $playerCamera/Node2D/Polvo
+onready var life = $playerCamera/Node2D/Life
 var screensize
 var velocity_ant = Vector2()
 var faceUp = false
@@ -85,10 +88,14 @@ func get_input():
 	return velocity
 
 func _physics_process(delta):
-	print(salud)
 	if(ReglesRooms.screen_shake > 0):
 		cam.offset = Vector2(rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake), rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake))
 		ReglesRooms.screen_shake -= 0.1
+	
+	life.value = salud;
+	if(salud <= 0):
+		get_parent().game_over();
+	text.value = polvito;
 	move_and_slide(get_input())
 
 func hechizo_base(dir, forza):

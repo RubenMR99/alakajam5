@@ -51,11 +51,13 @@ var par = false
 func _process(delta):
 	if(not funcionar):
 		global_position = player.global_position+Vector2(0,+8)
+		if(player.polvito < 100):
+			player.polvito += 1
 	elif(funcionar and player.polvito > 0 and par and player.velocity_ant.length() > 2):
 		var polvito = polvo.instance()
 		polvito.global_position = player.global_position
 		polvito.z_index = 0
-		player.polvito -= 1
+		player.polvito -= 0.5
 		container.add_child(polvito) 
 		par = false
 	else:
@@ -77,7 +79,8 @@ func calcular_spell():
 func detect(body, valor_augmentar):
 	global_position.x = body.global_position.x
 	global_position.y = body.global_position.y+8
-	spell = spell + String(valor_augmentar)
+	if(player.polvito > 0):
+		spell = spell + String(valor_augmentar)
 
 func _on_Up(body):
 	detect(body, 0)

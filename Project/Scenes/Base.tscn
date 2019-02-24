@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node
+
+var game = preload(\"res://Scenes/Game.tscn\")
+var menu = preload(\"res://Scenes/Menu.tscn\")
+
+func _ready():
+	pass
+
+func _play():
+	$Menu.visible = false
+	var g = game.instance()
+	add_child(g)
+
+func _restart():
+	$Menu.visible = true
+"
+
+[node name="Base" type="Node"]
+
+script = SubResource( 1 )
+
+[node name="Menu" parent="." index="0" instance=ExtResource( 1 )]
+
+

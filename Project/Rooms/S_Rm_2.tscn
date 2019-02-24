@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Tilesets/forest.tres" type="TileSet" id=1]
 
-[node name="sala" type="Node2D" index="0"]
+[node name="sala" type="Node2D"]
 
 [node name="fondo" type="TileMap" parent="." index="0"]
 

@@ -60,3 +60,4 @@ func _on_Area2D_body_exited(body):
 
 func fer_mal(body):
 	body.salud -= 20
+	body.position.x += direccio.x * 3

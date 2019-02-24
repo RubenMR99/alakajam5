@@ -60,3 +60,5 @@ func basico(velocitat):
 
 func fer_mal(body):
 	body.salud -= 5
+	body.position.x += direccio.x * .2
+	body.position.y += direccio.y * .2

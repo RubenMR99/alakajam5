@@ -2,6 +2,11 @@ extends Node
 
 var porta_resource = preload("res://Objects/Porta.tscn");
 
+var arbusto = preload("res://Scenes/arbusto.tscn");
+var slime = preload("res://Scenes/slime.tscn");
+var boxeadora = preload("res://Scenes/boxeadora.tscn");
+var screensize
+
 onready var cont = $Container
 onready var pla = $player
 onready var mini = $player/miniMapa
@@ -75,6 +80,7 @@ func _ready():
 	pass
 
 func load_room():
+	
 	for i in cont.get_children():
 			i.queue_free()
 	
@@ -86,7 +92,34 @@ func load_room():
 	sala.name = "sala"
 	sala.position.y = 0
 	cont.add_child(sala)
-
+	
+	var n_arbusts = rand_range(0,5)
+	var contador = 0
+	while (contador < n_arbusts):
+		var arbustNou = arbusto.instance()
+		cont.add_child(arbustNou)
+		arbustNou.position.x = rand_range(0, 600)
+		arbustNou.position.y = rand_range(0, 400)
+		contador += 1
+	
+	var n_slime = rand_range(0,5)
+	contador = 0
+	while (contador < n_slime):
+		var slimeNou = slime.instance()
+		cont.add_child(slimeNou)
+		slimeNou.position.x = rand_range(0, 600)
+		slimeNou.position.y = rand_range(0, 400)
+		contador += 1
+	
+	var n_boxin = rand_range(0,3)
+	contador = 0
+	while (contador < n_boxin):
+		var boxeadoraNou = boxeadora.instance()
+		cont.add_child(boxeadoraNou)
+		boxeadoraNou.position.x = rand_range(0, 600)
+		boxeadoraNou.position.y = rand_range(0, 400)
+		contador += 1
+	
 	if(mapa[pos_actual.x][pos_actual.y-1] > 0):
 		var porta = porta_resource.instance()
 		porta.direccio = Vector2(0,-1)

@@ -6,6 +6,7 @@ export (float) var max_acc = 2.5
 export (float) var frenada = 0.3
 export (int) var speed = 200
 export (int) var polvito = 100
+var salud = 250
 
 onready var cam = $playerCamera
 var screensize
@@ -84,6 +85,7 @@ func get_input():
 	return velocity
 
 func _physics_process(delta):
+	print(salud)
 	if(ReglesRooms.screen_shake > 0):
 		cam.offset = Vector2(rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake), rand_range(-ReglesRooms.screen_shake,ReglesRooms.screen_shake))
 		ReglesRooms.screen_shake -= 0.1
@@ -127,3 +129,7 @@ func hechizo_rayo(size):
 	rayo.position = position+Vector2(0,-size*2) 
 	rayo.scale = Vector2(size*0.2, size*0.2)
 	get_parent().add_child(rayo)
+
+func _on_hitbox_entered(body):
+	if body.has_method("fer_mal"):
+		body.fer_mal(self)

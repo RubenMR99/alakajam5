@@ -59,3 +59,5 @@ func _perd_personatge(body):
 
 func fer_mal(body):
 	body.salud -= 10
+	body.position.x += direccio.x * .5
+	body.position.y += direccio.y * .5

@@ -147,12 +147,6 @@ func load_room():
 		cont.add_child(porta)
 
 func game_over():
-	var ga = Sprite.new()
-	ga.global_position = Vector2(0,0)
-	ga.centered = false
-	ga.set_texture(game_over)
-	add_child(ga)
-	yield(get_tree().create_timer(3), "timeout")
-	get_parent().restart()
+	get_tree().change_scene("res://Scenes/game_over.tscn")
 	queue_free()
 	

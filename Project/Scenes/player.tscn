@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Objects/miniMapa.tscn" type="PackedScene" id=2]
@@ -10,18 +10,18 @@
 [ext_resource path="res://Sprites/barra_vida/Barra_vida_marc.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/barra_vida/Barra_vida_vida.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/barra_vida/Barra_vida_cor.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Mago/back/tile000.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Mago/back/tile001.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Mago/back/tile002.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Mago/back/tile003.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Mago/front/tile000.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Mago/front/tile001.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Mago/front/tile002.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Mago/front/tile003.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando1.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando2.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando3.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando4.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mago/mago_side_caminando/Mago_Side_caminando4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mago/back/tile000.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mago/back/tile001.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mago/back/tile002.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mago/back/tile003.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mago/front/tile000.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mago/front/tile001.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mago/front/tile002.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mago/front/tile003.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/Mago/frontIdle/tile000.png" type="Texture" id=23]
 [ext_resource path="res://Sprites/Mago/frontIdle/tile001.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Mago/frontIdle/tile002.png" type="Texture" id=25]
@@ -38,24 +38,24 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 9.12344, 23.8897 )
+extents = Vector2( 6.10779, 23.8897 )
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "back",
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "front",
+"name": "back",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "right",
+"name": "front",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
@@ -68,6 +68,12 @@ animations = [ {
 "name": "backIdle",
 "speed": 2.5
 } ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 11.4251
+height = 5.89639
 
 [node name="player" type="KinematicBody2D"]
 
@@ -121,6 +127,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Node2D" type="Node2D" parent="playerCamera" index="1"]
 
+editor/display_folded = true
 z_index = 500
 _sections_unfolded = [ "Z Index" ]
 
@@ -211,10 +218,26 @@ shape = SubResource( 1 )
 
 frames = SubResource( 2 )
 animation = "front"
-frame = 2
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="playerEmitor" type="Position2D" parent="." index="3"]
+
+[node name="Area2D" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( -0.473335, 6.62674 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 

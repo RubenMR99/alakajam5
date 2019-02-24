@@ -21,7 +21,7 @@ func _restart():
 	$Menu.visible = true
 "
 
-[node name="Base" type="Node"]
+[node name="Base" type="Node" index="0"]
 
 script = SubResource( 1 )
 

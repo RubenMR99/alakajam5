@@ -26,6 +26,10 @@ func _ready():
 
 func get_input():
 	var velocity = Vector2(0,0)
+	if Input.is_action_pressed('ui_cancel'):
+		var currentScene = get_tree().get_current_scene().get_filename()
+		#print(currentScene) # for Debug
+		get_tree().change_scene(currentScene)
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += (1 + acceleracio)
 	if Input.is_action_pressed('ui_left'):
@@ -137,6 +141,7 @@ func hechizo_rayo(size):
 	rayo.scale = Vector2(size*0.2, size*0.2)
 	get_parent().add_child(rayo)
 
-func _on_hitbox_entered(body):
+func _on_Area2D_body_entered(body):
+	print("au")
 	if body.has_method("fer_mal"):
 		body.fer_mal(self)

@@ -83,7 +83,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.1, 1.1 ), Vector2( 0.1, 0.1 ) ]
+"values": [ Vector2( 1.1, 1.1 ), Vector2( 0.01, 0.01 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("aigua:scale")
@@ -95,7 +95,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.01, 0.01 ) ]
 }
 
 [node name="HechizoAqua" type="Area2D"]
@@ -135,7 +135,6 @@ blend_times = [  ]
 
 visible = false
 show_behind_parent = true
-scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 hframes = 2
 frame = 1
@@ -155,7 +154,7 @@ blend_times = [  ]
 
 visible = false
 rotation = -1.10453
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 

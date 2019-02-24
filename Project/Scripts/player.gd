@@ -5,6 +5,7 @@ export (float) var acceleracio = 0.8
 export (float) var max_acc = 2.5
 export (float) var frenada = 0.3
 export (int) var speed = 200
+export (int) var polvito = 100
 
 onready var cam = $playerCamera
 var screensize

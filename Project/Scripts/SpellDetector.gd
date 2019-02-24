@@ -13,9 +13,7 @@ var spellBook = [["Bullet","^(0+$|1+$|2+$|3+$|4+$|5+$|6+$|7+$)"],
                  #["Water", "^4+3+(|4)5+(|6)7+(|0)1{1,6}$"],
                  ["Water", "^4+3+4?5+6?7+0?1{1,6}$"],
                  #["Rempalago", "^(|4|6)5+(|3)2+(|3|4)5+$"],
-                 ["Rempalago", "^(4|6)?5+3?2+(3|4)?5+$"],
-                 #["Terra", "^(|
-                 ["Terra", "^(1|3)?2+(6|0)?7+(4|6)?5+(2|4)?3+(0|2)?1+$"]
+                 ["Rempalago", "^(4|6)?5+3?2+(3|4)?5+$"]
                 ]
 
 
@@ -53,10 +51,11 @@ var par = false
 func _process(delta):
 	if(not funcionar):
 		global_position = player.global_position+Vector2(0,+8)
-	elif(funcionar and par):
+	elif(funcionar and player.polvito > 0 and par and player.velocity_ant.length() > 2):
 		var polvito = polvo.instance()
 		polvito.global_position = player.global_position
 		polvito.z_index = 0
+		player.polvito -= 1
 		container.add_child(polvito) 
 		par = false
 	else:

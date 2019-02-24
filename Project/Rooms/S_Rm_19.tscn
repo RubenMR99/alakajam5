@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tilesets/forest.tres" type="TileSet" id=1]
+
+[node name="sala" type="Node2D" index="0"]
+
+[node name="fondo" type="TileMap" parent="." index="0"]
+
+position = Vector2( 0, -32 )
+z_as_relative = false
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = true
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65537, 2, 0, -131065, 2, 0, -131064, 13, 0, -131063, 13, 0, -131062, 2, 0, -131054, 2, 0, 65544, 30, 0, 65545, 30, 0, 327680, 30, 0, 327697, 30, 0, 458750, 13, 0, 393216, 30, 0, 393233, 30, 0, 393235, 13, 0, 524286, 13, 0, 458771, 13, 0, 720904, 30, 0, 720905, 30, 0, 851976, 13, 0, 851977, 13, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform", "Z Index" ]
+
+[node name="superior" type="TileMap" parent="." index="1"]
+
+z_index = 10
+z_as_relative = false
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -131074, 31, 0, -131073, 31, 0, -196608, 31, 0, -196607, 31, 0, -196606, 31, 0, -196605, 31, 0, -196604, 31, 0, -196603, 31, 0, -196602, 31, 0, -196601, 31, 0, -196600, 31, 0, -196599, 31, 0, -196598, 31, 0, -196597, 31, 0, -196596, 31, 0, -196595, 31, 0, -196594, 31, 0, -196593, 31, 0, -196592, 31, 0, -196591, 31, 0, -196590, 31, 0, -196589, 31, 0, -65538, 31, 0, -131053, 31, 0, -2, 31, 0, -65517, 31, 0, 65534, 31, 0, 19, 31, 0, 131070, 31, 0, 65555, 31, 0, 196606, 31, 0, 131091, 31, 0, 262142, 31, 0, 196627, 31, 0, 327678, 31, 0, 262163, 31, 0, 393214, 31, 0, 327699, 31, 0, 458750, 31, 0, 393235, 31, 0, 524286, 31, 0, 458771, 31, 0, 589822, 31, 0, 524307, 31, 0, 655358, 31, 0, 589843, 31, 0, 720894, 31, 0, 655379, 31, 0, 786430, 31, 0, 720915, 31, 0, 851966, 31, 0, 851967, 31, 0, 786432, 31, 0, 786433, 31, 0, 786434, 31, 0, 786435, 31, 0, 786436, 31, 0, 786437, 31, 0, 786438, 31, 0, 786439, 31, 0, 786440, 31, 0, 786441, 31, 0, 786442, 31, 0, 786443, 31, 0, 786444, 31, 0, 786445, 31, 0, 786446, 31, 0, 786447, 31, 0, 786448, 31, 0, 786449, 31, 0, 786450, 31, 0, 786451, 31, 0 )
+_sections_unfolded = [ "Cell", "Z Index" ]
+
+

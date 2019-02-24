@@ -28,7 +28,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 3.20809
 
-[node name="hechizoBase" type="Area2D" index="0"]
+[node name="hechizoBase" type="Area2D"]
 
 position = Vector2( 288, 192 )
 input_pickable = true
@@ -43,7 +43,6 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
-SPEED = 100
 
 [node name="baseSprite" type="AnimatedSprite" parent="." index="0"]
 

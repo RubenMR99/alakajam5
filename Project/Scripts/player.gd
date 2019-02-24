@@ -9,6 +9,7 @@ export (int) var speed = 200
 var screensize
 var velocity_ant = Vector2()
 var faceUp = false
+var hechizoBase = preload("res://Scenes/hechizos/hechizoBase.tscn");
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -80,3 +81,24 @@ func get_input():
 
 func _physics_process(delta):
 	move_and_slide(get_input())
+
+func hechizo_base(dir, forza):
+	var basico = hechizoBase.instance()
+	get_parent().add_child(basico)
+	basico.position = $playerEmitor.global_position
+	if (dir == "0"):
+		basico._0(forza)
+	elif (dir == "1"):
+		basico._1(forza)
+	elif (dir == "2"):
+		basico._2(forza)
+	elif (dir == "3"):
+		basico._3(forza)
+	elif (dir == "4"):
+		basico._4(forza)
+	elif (dir == "5"):
+		basico._5(forza)
+	elif (dir == "6"):
+		basico._6(forza)
+	elif (dir == "7"):
+		basico._7(forza)

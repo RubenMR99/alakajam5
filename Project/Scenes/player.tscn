@@ -78,6 +78,7 @@ speed = 275
 
 [node name="playerCamera" type="Camera2D" parent="." index="0"]
 
+editor/display_folded = true
 anchor_mode = 1
 rotating = false
 current = true
@@ -116,8 +117,11 @@ shape = SubResource( 1 )
 [node name="playerSprite" type="AnimatedSprite" parent="." index="2"]
 
 frames = SubResource( 2 )
-animation = "right"
+animation = "front"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
+
+[node name="playerEmitor" type="Position2D" parent="." index="3"]
 
 

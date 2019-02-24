@@ -32,14 +32,14 @@ func _input(event):
 			funcionar = false
 	if(event.is_action_pressed("ui_accept")):
 		funciona.append(spell)
-		print("nice")
+		#print("nice")
 	elif(event.is_action_pressed("ui_cancel")):
 		no_funciona.append(spell)
-		print("tonto")
+		#print("tonto")
 	elif(event.is_action_pressed("ui_focus_next")):
-		print(funciona)
-		print(no_funciona)
-		
+		#print(funciona)
+		#print(no_funciona)
+		pass
 
 
 var par = false
@@ -65,7 +65,7 @@ func calcular_spell():
 		var result = regex.search(spell)
 		if(result):
 			trobat = true
-			print(spellBook[i][0])
+			executar_echizo(spellBook[i][0], spell)
 		i+= 1
 
 func detect(body, valor_augmentar):
@@ -96,3 +96,8 @@ func _on_Left(body):
 
 func _on_UpLeft(body):
 	detect(body, 7)
+
+func executar_echizo(nom, truco):
+	print(nom)
+	if (nom == "Bullet"):
+		player.hechizo_base((truco.substr(truco.length() - 1, truco.length())), truco.length())

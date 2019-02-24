@@ -1,6 +1,7 @@
 extends Node
 
 var porta_resource = preload("res://Objects/Porta.tscn");
+
 onready var cont = $Container
 onready var pla = $player
 onready var mini = $player/miniMapa
